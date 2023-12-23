@@ -1,0 +1,12 @@
+@font-face {
+  font-family: RM Neue;
+  src: url("../css/fonts/RMNeue-Regular.woff");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: RM Neue;
+  src: url("../css/fonts/RMNeue-Bold.woff");
+  font-style: normal;
+  font-weight: 700;
+}
