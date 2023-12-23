@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>one dot eight</title>
-
     <meta
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"
@@ -19,91 +18,44 @@
 
   <body onLoad="dt()">
     <div id="nav">
-      <div class="left">
-        <div class="column">
-          <a href="/"><b>ONEDOTEIGHT.STUDIO</b></a>
-        </div>
-        <div class="column">
-          <a href="">PORTFOLIO</a>
-          <a href="">ABOUT</a>
-          <a href="">CONTACT</a>
-          <a href="">INSTAGRAM</a>
-        </div>
-        <div class="column"></div>
+      <div class="column">
+        <a href="/"><b>onedoteight.studio</b></a>
       </div>
-      <div class="right">
-        <div id="datetime"></div>
-        <div>OSIJEK, HR</div>
+      <div class="column"></div>
+      <div class="column">
+        <a href="">portfolio</a>
+        <a href="">about</a>
+      </div>
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column right">
+        <a href="">contact</a>
+        <a href="">instagram</a>
       </div>
     </div>
 
-    <div class="content">
-      <div class="content__img">
-        <div
-          class="content__img-inner"
-          style="background-image: url(assets/trail/1.png)"
-        ></div>
-      </div>
-      <div class="content__img">
-        <div
-          class="content__img-inner"
-          style="background-image: url(assets/trail/2.png)"
-        ></div>
-      </div>
-      <div class="content__img">
-        <div
-          class="content__img-inner"
-          style="background-image: url(assets/trail/3.png)"
-        ></div>
-      </div>
-      <div class="content__img">
-        <div
-          class="content__img-inner"
-          style="background-image: url(assets/trail/4.png)"
-        ></div>
-      </div>
-      <div class="content__img">
-        <div
-          class="content__img-inner"
-          style="background-image: url(assets/trail/5.png)"
-        ></div>
-      </div>
-      <div class="content__img">
-        <div
-          class="content__img-inner"
-          style="background-image: url(assets/trail/6.png)"
-        ></div>
-      </div>
-      <div class="content__img">
-        <div
-          class="content__img-inner"
-          style="background-image: url(assets/trail/7.png)"
-        ></div>
-      </div>
-      <div class="content__img">
-        <div
-          class="content__img-inner"
-          style="background-image: url(assets/trail/8.png)"
-        ></div>
-      </div>
-      <div class="content__img">
-        <div
-          class="content__img-inner"
-          style="background-image: url(assets/trail/9.png)"
-        ></div>
-      </div>
-      <div class="content__img">
-        <div
-          class="content__img-inner"
-          style="background-image: url(assets/trail/10.png)"
-        ></div>
-      </div>
+    <div id="footer">
+      <div>OSIJEK, HR</div>
+      <div id="datetime"></div>
+    </div>
+
+    <div class="trails">
+      <img src="assets/trail/1.png" />
+      <img src="assets/trail/2.png" />
+      <img src="assets/trail/3.png" />
+      <img src="assets/trail/4.png" />
+      <img src="assets/trail/5.png" />
+      <img src="assets/trail/6.png" />
+      <img src="assets/trail/7.png" />
+      <img src="assets/trail/8.png" />
+      <img src="assets/trail/9.png" />
+      <img src="assets/trail/10.png" />
     </div>
 
     <div class="logo-middle"><img src="assets/logo.svg" /></div>
 
     <script src="js/imagesloaded.js"></script>
-    <script src="js/gsap.js"></script>
-    <script type="module" src="js/index.js"></script>
+    <script src="js/TweenMax.js"></script>
+    <script src="js/trail.js"></script>
   </body>
 </html>

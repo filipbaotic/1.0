@@ -95,7 +95,7 @@
       // upcoming image index
       this.imgPosition = 0;
       // zIndex value to apply to the upcoming image
-      this.zIndexVal = -1;
+      this.zIndexVal = 1;
       // mouse distance required to show the next image
       this.threshold = 120;
       // render the images
@@ -108,12 +108,12 @@
       cacheMousePos.x = MathUtils.lerp(
         cacheMousePos.x || mousePos.x,
         mousePos.x,
-        0.1
+        0.5
       );
       cacheMousePos.y = MathUtils.lerp(
         cacheMousePos.y || mousePos.y,
         mousePos.y,
-        0.1
+        0.5
       );
 
       // if the mouse moved more than [this.threshold] then show the next image
@@ -177,22 +177,22 @@
         // then make it disappear
         .to(
           img.DOM.el,
-          1,
+          0.1,
           {
             ease: Power1.easeOut,
             opacity: 0,
           },
-          0.4
+          0.8
         )
         // scale down the image
         .to(
           img.DOM.el,
-          1,
+          0.5,
           {
             ease: Quint.easeOut,
             scale: 0.2,
           },
-          0.4
+          0.8
         );
     }
   }
