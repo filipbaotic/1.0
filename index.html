@@ -2,13 +2,13 @@
 <html>
   <head>
     <title>one dot eight</title>
+
     <meta
       name="description"
       content="creative studio for design, photography and video"
     />
-    <meta name="author" content="1.8 studio by Filip Baotić" />
-    <meta name="owner" content="1.8 studio by Filip Baotić" />
-    <meta name="author" content="1.8 studio by Filip Baotić" />
+    <meta name="author" content="Filip Baotić" />
+    <meta name="owner" content="Filip Baotić" />
     <meta
       name="keywords"
       content="1.8 studio, one dot eight, filip baotic, photographer, design, video, photography, osijek, zagreb, zupanja, weddings, shooting, camera, book, portrait, studio"
@@ -28,24 +28,37 @@
     <link rel="shortcut icon" href="assets/favicon.png" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-6GYSHSJVM5"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-6GYSHSJVM5");
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/datetime.js"></script>
   </head>
 
   <body onLoad="dt()">
     <div id="nav">
-      <div class="column">
-        <a href="/"><b>onedoteight.studio</b></a>
+      <div class="column kill-sm">
+        <a href="/">onedoteight.studio</a>
       </div>
-      <div class="column"></div>
-      <div class="column">
-        <a href="">portfolio</a>
-        <a href="">about</a>
-      </div>
-      <div class="column"></div>
-      <div class="column"></div>
+      <div class="column kill-sm kill-md kill-lg"></div>
+      <div class="column kill-sm kill-md kill-lg"></div>
+      <div class="column kill-sm kill-md"></div>
+      <div class="column kill-sm"></div>
       <div class="column right">
-        <a href="">contact</a>
-        <a href="">instagram</a>
+        <a onCLick="copy()">hello&commat;onedoteight.studio</a>
+      </div>
+      <div class="column right">
+        <a href="https://www.instagram.com/onedoteight.studio/">instagram</a>
       </div>
     </div>
 
@@ -68,6 +81,8 @@
     </div>
 
     <div class="logo-middle"><img src="assets/logo.svg" /></div>
+
+    <div id="tooltip">📋 Copied to clipboard!</div>
 
     <script src="js/imagesloaded.js"></script>
     <script src="js/TweenMax.js"></script>

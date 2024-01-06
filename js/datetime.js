@@ -16,3 +16,16 @@ function dt() {
     day + "." + month + "." + year + " " + hour + ":" + minute;
   display_dt();
 }
+
+const tooltip = document.getElementById("tooltip");
+
+function copy() {
+  navigator.clipboard.writeText("hello@onedoteight.studio").then(() => {
+    $(document).ready(function () {
+      $("#tooltip").addClass("show");
+      setTimeout(() => {
+        $("#tooltip").removeClass("show");
+      }, 2000);
+    });
+  });
+}
