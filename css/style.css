@@ -18,7 +18,10 @@ body {
 }
 
 a,
-a:hover {
+a:hover,
+.copy {
+  display: inline-block;
+  cursor: pointer;
   color: var(--base-white);
   text-decoration: none;
 }
