@@ -176,10 +176,6 @@ b {
     width: calc(100vw - 40px);
     height: calc(100vh - 40px);
   }
-
-  .logo-middle img {
-    /*filter: saturate(0) brightness(5);*/
-  }
 }
 
 @media (max-width: 680px) {
