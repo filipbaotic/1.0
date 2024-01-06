@@ -29,3 +29,22 @@ function copy() {
     });
   });
 }
+
+$(document).ready(function () {
+  var slideIndex = 0;
+  var slides = $(".slide");
+
+  function showSlides() {
+    slides.removeClass("show");
+    slideIndex++;
+
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+
+    slides.eq(slideIndex - 1).addClass("show");
+    setTimeout(showSlides, 400);
+  }
+
+  showSlides();
+});

@@ -124,7 +124,7 @@ b {
 #tooltip {
   pointer-events: none;
   position: fixed;
-  bottom: 76px;
+  bottom: 32px;
   left: 50%;
   transform: translate(-50%, 4px) scale(0.96, 0.96);
   filter: blur(2px);
@@ -151,15 +151,30 @@ b {
     display: none !important;
     opacity: 0 !important;
   }
-  body {
-    background-image: url(../assets/background.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
 
   .logo-middle {
     mix-blend-mode: normal;
+  }
+
+  #slideshow,
+  .slide {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .slide {
+    display: none;
+  }
+
+  .slide.show {
+    display: block;
   }
 }
 
@@ -178,6 +193,10 @@ b {
     padding: 20px;
     width: calc(100vw - 40px);
     height: calc(100vh - 40px);
+  }
+
+  #tooltip {
+    bottom: 20px;
   }
 }
 
