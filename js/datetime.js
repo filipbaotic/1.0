@@ -25,7 +25,7 @@ function copy() {
       $("#tooltip").addClass("show");
       setTimeout(() => {
         $("#tooltip").removeClass("show");
-      }, 2000);
+      }, 3000);
     });
   });
 }
