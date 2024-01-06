@@ -149,7 +149,7 @@ b {
     opacity: 0 !important;
   }
   body {
-    background-image: url(../assets/background.gif);
+    background-image: url(../assets/background.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
