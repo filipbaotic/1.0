@@ -1,3 +1,33 @@
+// lazy loader desktop
+
+document.addEventListener("DOMContentLoaded", function () {
+  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function (
+      entries,
+      observer
+    ) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.srcset = lazyImage.dataset.srcset;
+          lazyImage.classList.remove("lazy");
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+
+    lazyImages.forEach(function (lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  } else {
+  }
+});
+
+// date and time
+
 function display_dt() {
   mytime = setTimeout("dt()", 1000);
 }
@@ -17,6 +47,8 @@ function dt() {
   display_dt();
 }
 
+// tooltip
+
 const tooltip = document.getElementById("tooltip");
 
 function copy() {
@@ -29,6 +61,8 @@ function copy() {
     });
   });
 }
+
+// slideshow mobile
 
 $(document).ready(function () {
   var slideIndex = 0;
