@@ -1,5 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
 @import url("../css/vars.css");
-@import url("../css/fonts.css");
 
 html,
 body {
@@ -10,11 +10,14 @@ body {
   overflow: hidden;
   background: var(--matcha-200);
   color: var(--base-white);
-  font-family: RM Neue;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: "ss01" on;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 500;
   line-height: normal;
+  letter-spacing: -0.8px;
 }
 
 a,
