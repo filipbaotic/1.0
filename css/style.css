@@ -123,6 +123,7 @@ b {
 }
 
 .trails img {
+  width: 250px !important;
   max-width: 250px;
   position: absolute;
   top: 0;
