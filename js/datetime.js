@@ -12,8 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (entry.isIntersecting) {
           let lazyImage = entry.target;
           lazyImage.src = lazyImage.dataset.src;
-          lazyImage.srcset = lazyImage.dataset.srcset;
-          lazyImage.classList.remove("lazy");
+          lazyImage.onload = function() {
+            lazyImage.srcset = lazyImage.dataset.srcset;
+            lazyImage.classList.remove("lazy");
+          }
           lazyImageObserver.unobserve(lazyImage);
         }
       });
@@ -25,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
   }
 });
+
 
 // date and time
 
@@ -67,6 +70,7 @@ function copy() {
 $(document).ready(function () {
   var slideIndex = 0;
   var slides = $(".slide");
+  var slideshowTimeout;
 
   function showSlides() {
     slides.removeClass("show");
@@ -77,8 +81,26 @@ $(document).ready(function () {
     }
 
     slides.eq(slideIndex - 1).addClass("show");
-    setTimeout(showSlides, 400);
+    slideshowTimeout = setTimeout(showSlides, 400);
   }
 
-  showSlides();
+  function startSlideshow() {
+    slideshowTimeout = setTimeout(showSlides, 400);
+  }
+
+  function stopSlideshow() {
+    clearTimeout(slideshowTimeout);
+  }
+
+  // Add touchstart and touchend event listeners
+  $(".slideshow").on("touchstart", function () {
+    stopSlideshow();
+  });
+
+  $(".slideshow").on("touchend", function () {
+    startSlideshow();
+  });
+
+  // Start the slideshow initially
+  startSlideshow();
 });

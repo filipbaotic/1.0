@@ -59,6 +59,14 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/datetime.js"></script>
+
+    <!-- This fixes loading images on mobile -->
+    <link rel="preload" as="image" href="/assets/trail/1.webp" />
+    <link rel="preload" as="image" href="/assets/trail/2.webp" />
+    <link rel="preload" as="image" href="/assets/trail/3.webp" />
+    <link rel="preload" as="image" href="/assets/trail/4.webp" />
+    <link rel="preload" as="image" href="/assets/trail/5.webp" />
+    <link rel="preload" as="image" href="/assets/trail/6.webp" />
   </head>
 
   <body onLoad="dt()">
@@ -90,7 +98,7 @@
       <div id="datetime"></div>
     </div>
 
-    <div class="trails">
+    <div id="preload" class="trails">
       <img
         class="lazy"
         src="assets/trail/lazy/1.webp"
