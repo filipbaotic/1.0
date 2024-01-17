@@ -72,6 +72,15 @@ $(document).ready(function () {
   var slides = $(".slide");
   var slideshowTimeout;
 
+  slides.each(function (index, slide) {
+    $(slide).on("touchstart", preventCopy); // simple touch events
+    $(slide).on("gesturestart", preventCopy); // events with more than one finger
+  });
+
+  function preventCopy(event) {
+    event.preventDefault();
+  }
+
   function showSlides() {
     slides.removeClass("show");
     slideIndex++;
