@@ -106,7 +106,7 @@ b {
   height: calc(100vh - 64px);
   pointer-events: none;
   z-index: 99999;
-  mix-blend-mode: multiply;
+  mix-blend-mode: darken;
 }
 
 .logo-middle img {
