@@ -86,10 +86,12 @@ $(function () {
     utmCampaign === "globetrotter"
   ) {
     $("#campaign").show();
+    $("#preload").hide();
   }
 
   $("#close-campaign").on("click", function () {
     $("#campaign").hide();
+    $("#preload").show();
   });
 });
 

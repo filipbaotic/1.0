@@ -205,7 +205,7 @@ b {
   display: flex;
   align-content: center;
   justify-content: center;
-  z-index: 999;
+  z-index: 99999;
 }
 
 .modal-content{
@@ -230,6 +230,7 @@ b {
 .wallpaper img.download{
   height: fit-content;
   width: auto;
+  max-width: fit-content;
 }
 
 #close {
@@ -257,6 +258,7 @@ b {
   align-items: flex-start;
   gap: 24px;
   align-self: stretch;
+  color: var(--titanium-900);
 }
 
 .modal-copy a{
