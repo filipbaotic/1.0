@@ -89,11 +89,12 @@ $(function () {
     $("#preload").hide();
   }
 
-  $("#close-campaign").on("click", function () {
+});
+
+  function closeModal() {
     $("#campaign").hide();
     $("#preload").show();
-  });
-});
+  }
 
 // slideshow mobile
 

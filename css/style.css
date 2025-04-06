@@ -37,12 +37,12 @@ a:hover,
   text-decoration: none;
 }
 
-.center{
-  text-align: center;
-}
-
 b {
   font-weight: 700;
+}
+
+p {
+  padding: 0px;
 }
 
 #nav {
@@ -203,7 +203,7 @@ b {
   background: var(--titanium-900-80);
   padding: 16px;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   z-index: 99999;
 }
@@ -222,15 +222,17 @@ b {
 
 .modal-content .wallpaper{
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--titanium-200);
   padding: 16px;
   aspect-ratio: 1/1;
 }
 
 .wallpaper .download{
-  height: fit-content;
+  height: -webkit-fill-available;
   width: auto;
-  max-width: fit-content;
 }
 
 #close {
@@ -247,6 +249,7 @@ b {
   color: var(--base-white);
   font-size: 12px;
   line-height: 120%;
+  text-align: center;
   mix-blend-mode: color-dodge;
   pointer-events: none;
 }
@@ -256,13 +259,19 @@ b {
   padding: 16px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 10px;
   align-self: stretch;
   color: var(--titanium-900);
 }
 
 .modal-copy a{
   text-decoration: underline;
+  color: inherit;
+}
+
+.follow{
+  padding-top: 14px;
+  text-align: center;
 }
 
 @media (max-width: 440px) {
