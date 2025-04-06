@@ -219,16 +219,14 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
-  font-style: normal;
 }
 
 .modal-content .wallpaper{
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   background: var(--titanium-200);
   padding: 16px;
+  width: initial;
   aspect-ratio: 1/1;
 }
 
@@ -236,6 +234,7 @@ p {
   height: -webkit-fill-available;
   max-height: 100%;
   width: auto;
+  max-width: 312px;
   aspect-ratio: 2/3;
 }
 
