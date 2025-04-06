@@ -227,7 +227,7 @@ b {
   aspect-ratio: 1/1;
 }
 
-.wallpaper img.download{
+.wallpaper .download{
   height: fit-content;
   width: auto;
   max-width: fit-content;
