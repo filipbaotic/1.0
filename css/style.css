@@ -231,10 +231,10 @@ p {
 }
 
 .wallpaper .download{
-  height: -webkit-fill-available;
-  max-height: 100%;
-  width: auto;
-  max-width: 312px;
+  position: absolute;
+  height: calc(100% - 32px);
+  left: 50%;
+  transform: translateX(-50%);
   aspect-ratio: 2/3;
 }
 
