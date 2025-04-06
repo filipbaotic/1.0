@@ -22,7 +22,7 @@ function dt() {
   if (minute < 10) minute = "0" + minute;
 
   document.getElementById("datetime").innerHTML =
-    day + "." + month + "." + year + " " + hour + ":" + minute + " GMT+2";
+    day + "." + month + "." + year + " " + hour + ":" + minute;
 
   display_dt();
 } 
