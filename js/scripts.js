@@ -3,21 +3,29 @@
 function display_dt() {
   mytime = setTimeout("dt()", 1000);
 }
+
 function dt() {
   var x = new Date();
-  var month = x.getMonth() + 1;
-  var day = x.getDate();
-  var year = x.getFullYear() - 2000;
-  var hour = x.getHours();
-  var minute = x.getMinutes();
+
+  var utc = x.getTime() + x.getTimezoneOffset() * 60000;
+  var gmt2 = new Date(utc + 2 * 60 * 60000);
+
+  var month = gmt2.getMonth() + 1;
+  var day = gmt2.getDate();
+  var year = gmt2.getFullYear() - 2000;
+  var hour = gmt2.getHours();
+  var minute = gmt2.getMinutes();
+
   if (day < 10) day = "0" + day;
   if (month < 10) month = "0" + month;
   if (hour < 10) hour = "0" + hour;
   if (minute < 10) minute = "0" + minute;
+
   document.getElementById("datetime").innerHTML =
-    day + "." + month + "." + year + " " + hour + ":" + minute;
+    day + "." + month + "." + year + " " + hour + ":" + minute + " GMT+2";
+
   display_dt();
-}
+} 
 
 // lazy loader desktop
 
@@ -63,6 +71,27 @@ function copy() {
     });
   });
 }
+
+// campaign modal
+
+$(function () {
+  const params = new URLSearchParams(window.location.search);
+  const utmSource = params.get("utm_source");
+  const utmMedium = params.get("utm_medium");
+  const utmCampaign = params.get("utm_campaign");
+
+  if (
+    utmSource === "qr_code" &&
+    utmMedium === "sticker" &&
+    utmCampaign === "globetrotter"
+  ) {
+    $("#campaign").show();
+  }
+
+  $("#close-campaign").on("click", function () {
+    $("#campaign").hide();
+  });
+});
 
 // slideshow mobile
 

@@ -12,8 +12,6 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="1.8 studio by Filip Baotić" />
     <meta property="og:type" content="website" />
-    <link rel="preconnect" href="https://rsms.me/" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 
     <meta property="og:url" content="https://onedoteight.studio/" />
     <meta
@@ -25,24 +23,16 @@
       content="width=device-width, initial-scale=1, minimum-scale=0.75, maximum-scale=5"
     />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="language" content="en" />
     <meta name="og:image" content="assets/metadata_image.png" />
-    <meta property="og:video" content="assets/metadata_video.mp4" />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: light)"
-      content="#E8EBE6"
-    />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: dark)"
-      content="#1F211C"
-    />
     <link rel="shortcut icon" href="assets/favicon.png" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script
       async
@@ -58,7 +48,7 @@
       gtag("config", "G-6GYSHSJVM5");
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="js/datetime.js"></script>
+    <script src="js/scripts.js"></script>
 
     <!-- This fixes loading images on mobile -->
     <link rel="preload" as="image" href="assets/trail/1.webp" />
@@ -94,7 +84,7 @@
     </div>
 
     <div id="footer">
-      <!-- <div>OSIJEK, HR</div> -->
+      <div>ZAGREB, HR</div>
       <div id="datetime"></div>
     </div>
 
@@ -171,6 +161,8 @@
       />
     </div>
 
+
+
     <div class="slideshow">
       <div
         class="slide"
@@ -219,6 +211,21 @@
     </div>
 
     <div id="tooltip">📋 Copied to clipboard!</div>
+
+    <div class="modal" style="display: none;" id="campaign">
+      <div class="modal-content">
+        <div class="wallapper">
+          <img src="assets/onedoteightstudio.jpg" class="download">
+          <img src="css/close.svg" id="close">
+          <div class="wallpaper-copy">Press and hold <br>to download wallpaper</div>
+        </div>
+        <div class="modal-copy">
+          <p>If you’re seeing this it means that you scanned code from sticker somewhere. <br>
+          My name is Filip and I do photography and design.</p>
+          <p class="center">instagram: <a href="https://www.instagram.com/onedoteightstudio/">@onedoteightstudio</a></p>
+        </div>
+      </div>
+    </div>
 
     <script src="js/imagesloaded.js"></script>
     <script src="js/TweenMax.js"></script>
