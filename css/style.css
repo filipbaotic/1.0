@@ -43,6 +43,7 @@ b {
 
 p {
   padding: 0px;
+  margin: 0px;
 }
 
 #nav {
@@ -272,6 +273,7 @@ p {
 .follow{
   padding-top: 14px;
   text-align: center;
+  width: -webkit-fill-available;
 }
 
 @media (max-width: 440px) {
