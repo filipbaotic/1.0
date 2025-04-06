@@ -210,6 +210,7 @@ p {
 }
 
 .modal-content{
+  width: 100%;
   max-width: 500px;
   background: var(--base-white);
   font-family: "Geist Mono", monospace;
@@ -233,6 +234,7 @@ p {
 
 .wallpaper .download{
   height: -webkit-fill-available;
+  max-height: 100%;
   width: auto;
   aspect-ratio: 2/3;
 }
