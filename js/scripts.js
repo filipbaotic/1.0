@@ -8,7 +8,7 @@ function dt() {
   var x = new Date();
 
   var utc = x.getTime() + x.getTimezoneOffset() * 60000;
-  var gmt2 = new Date(utc + 2 * 60 * 60000);
+  var gmt2 = new Date(utc + 1 * 60 * 60000);
 
   var month = gmt2.getMonth() + 1;
   var day = gmt2.getDate();
